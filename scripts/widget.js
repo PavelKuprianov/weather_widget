@@ -1,13 +1,11 @@
 import { startWidget } from "./modules/widgetServis.js";
 
-const initWidget = (app) => {
+const initWidget = async (app) => {
 
-    const widget = startWidget();
+    const widget = await startWidget()
     app.append(widget);
-
+    
 }
 
-const app = document.getElementById('app')
-
-initWidget(app);
+initWidget(document.getElementById('app'));
 
